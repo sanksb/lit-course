@@ -8,6 +8,7 @@ import './views/data-binding';
 import './views/profiles-view';
 import './views/searcher-view';
 import './views/storybook-view';
+import './views/movies-view';
 import './profiles';
 
 export const routing = (outlet) => {
@@ -20,6 +21,7 @@ export const routing = (outlet) => {
     { path: '/profiles', component: 'profiles-view' },
     { path: '/searcher', component: 'searcher-view' },
     { path: '/storybook', component: 'storybook-view' },
+    { path: '/movies', component: 'movies-view' },
     { path: '(.*)', component: 'not-found-view' },
   ];
 

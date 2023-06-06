@@ -1,5 +1,5 @@
 {
-  "name": "lit-course",
+  "name": "y",
   "version": "1.0.0",
   "description": "Lit course",
   "main": "index.js",
@@ -64,6 +64,7 @@
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@open-wc/karma-esm": "^4.0.0",
     "@seed-catalog/styles": "^1.0.0",
     "@vaadin/router": "^1.2.0",
     "ip": "^1.1.5",
@@ -71,5 +72,16 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "rollup-plugin-babel": "^4.3.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicdata4/lit-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vicdata4/lit-course/issues"
+  },
+  "homepage": "https://github.com/vicdata4/lit-course#readme"
 }

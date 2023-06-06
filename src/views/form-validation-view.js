@@ -10,6 +10,12 @@ class FormValidationView extends LitElement {
     return [styles, commonStyles];
   }
 
+  static get properties() {
+    return {
+      radioList: { type: Array },
+    };
+  }
+
   render() {
     return html`
       <common-header></common-header>

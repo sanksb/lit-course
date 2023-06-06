@@ -29,8 +29,11 @@ class ListComponent extends LitElement {
           (item, i) =>
             html`
               <li>
-                ${dateFormatter(item.date).hour} ${item.message}
-                <button @click="${() => this.deleteItem(i)}">&times;</button>
+                <div id="contenedor-linea">
+                  ${dateFormatter(item.date).hour} ${item.message}
+                  <span style="color: ${item.color}">${item.car}</span>
+                  <button @click="${() => this.deleteItem(i)}">&times;</button>
+                </div>
               </li>
             `,
         )}

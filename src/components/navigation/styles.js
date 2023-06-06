@@ -113,7 +113,7 @@ export const navigationStyles = css`
     background-color: var(--header-background);
     opacity: 0.98;
     transition: top 0.5s;
-    z-index: 2;
+    z-index: 99;
   }
 
   .scroll-menu > .nav-list {

@@ -2,7 +2,7 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../src/components/form-validation.js';
 
 describe('Form validation', () => {
-  let el, email, password, submit;
+  let el, email, password, submit,car;
 
   before(async() => {
     const component = html`
@@ -13,6 +13,7 @@ describe('Form validation', () => {
     await el.updateComplete;
 
     email = el.shadowRoot.querySelector('#email');
+    car = el.shadowRoot.querySelector('#cars');
     password = el.shadowRoot.querySelector('#password');
     submit = el.shadowRoot.querySelector('input[type=submit]');
   });
@@ -64,9 +65,27 @@ describe('Form validation', () => {
     expect(thumbIcon).to.be.null;
   });
 
+  it('Not selected any car', async () => {
+    car.value = 'default'
+    email.value = 'test@test.com';
+    password.value = '12345678';
+
+    submit.click();
+    await el.updateComplete;
+
+    const thumbIcon = el.shadowRoot.querySelector('.alert-succesfull');
+    const message = el.shadowRoot.querySelector('.alert-msg');
+
+    expect(el.validated).equal(false);
+    expect(message).not.to.be.null;
+    expect(thumbIcon).to.be.null;
+
+  });
+
   it('Enter valid values', async() => {
     password.value = '12345678';
     email.value = 'test@test.com';
+    car.value = 'volvo';
 
     submit.click();
     await el.updateComplete;

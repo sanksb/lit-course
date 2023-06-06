@@ -39,4 +39,8 @@ export const navList = [
     name: 'Catalog',
     path: 'https://vicdata4.github.io/seed-catalog/',
   },
+  {
+    name: 'Movies',
+    path: '/movies',
+  },
 ];
